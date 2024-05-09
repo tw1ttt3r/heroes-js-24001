@@ -1,0 +1,35 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+nav #menus {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-left: 0;
+}
+
+#menus li {
+    font-size: 32px;
+    font-weight: 700;
+    flex: 1;
+    text-align: center;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.control {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}

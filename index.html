@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Heroes</title>
+        <script defer src="Registro.js"></script>
+        <script defer src="menus.js"></script>
+        <script defer src="utils.js"></script>
+        <script defer src="main.js"></script>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <nav>
+            <ul id="menus"></ul>
+        </nav>
+        <main>
+            <section class="invisible area" id="registrar">
+                aqui registramos
+            </section>
+            <section class="invisible area" id="buscar">
+                <form id="busquedaHeroe">
+                    <div class="control">
+                        <label for="busqueda">Buscar Por...</label>
+                        <select name="busqueda" id="busqueda">
+                            <option value="-1">Selecciona</option>
+                            <option value="nombre">Nombre</option>
+                            <option value="ciudad">Ciudad de Origen</option>
+                            <option value="genero">Genero</option>
+                        </select>
+                    </div>
+                    <div class="control">
+                        <label for="">Valor</label>
+                        <input name="dato" id="dato" type="text" disabled="true" placeholder="buscar heroe por...">
+                    </div>
+                    <input type="submit" value="Buscar">
+                </form>
+                <section id="imprime"></section>
+            </section>
+        </main>
+    </body>
+</html>
