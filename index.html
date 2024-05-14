@@ -4,6 +4,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Heroes</title>
+        <script defer src="db.js"></script>
+        <script defer src="Heroe.js"></script>
         <script defer src="Registro.js"></script>
         <script defer src="menus.js"></script>
         <script defer src="utils.js"></script>
@@ -15,8 +17,94 @@
             <ul id="menus"></ul>
         </nav>
         <main>
+            <!-- <section class="area" id="todosHeroes"></section> -->
             <section class="invisible area" id="registrar">
-                aqui registramos
+                <form id="registraHeroe">
+                    <!--this.nombre = ""
+                    this.ciudad = ""
+                    this.anios = 0
+                    this.genero = ""
+                    this.haspowers = false
+                    this.powers = []
+                    this.capa = false
+                    this.enemy = false;
+                    this.terrestre = false
+                    this.weakness = false
+                    this.allweakness = []
+                    this.tools = false-->
+                    <div class="control">
+                        <label for="nombre">Nombre de SuperHeroe:</label>
+                        <input type="text" id="nombre" name="nombre"> <!--  { type: "text", id: "nombre", "name": "nombre" }  -->
+                    </div>
+                    <div class="control">
+                        <label for="ciudad">Ciudad: </label>
+                        <input type="text" id="ciudad" name="ciudad">
+                    </div>
+                    <div class="control">
+                        <label for="anios">Años Activo: </label>
+                        <input type="number" id="anios" name="anios">
+                    </div>
+                    <div class="control">
+                        <label for="genero">Genero: </label>
+                        <div class="controlMutiple">
+                            <input type="radio" name="genero" id="genero" value="M"> Masculino 
+                            <input type="radio" name="genero" id="genero" value="F"> Femenino
+                        </div>
+                    </div>
+                    <div class="control">
+                        <label for="haspowers">Poderes: </label>
+                        <div class="controlMutiple">
+                            <input type="radio" name="haspowers" id="haspowers" value="S"> Si 
+                            <input type="radio" name="haspowers" id="haspowers" value="N"> No
+                        </div>
+                    </div>
+                    <div class="control">
+                        <label for="powers">Poderes (Separar cada poder con una coma):</label>
+                        <textarea name="powers" id="powers" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="control">
+                        <label for="capa">Usa Capa: </label>
+                         <div class="controlMutiple">
+                             <input type="radio" name="capa" id="capa" value="S"> Si 
+                             <input type="radio" name="capa" id="capa" value="N"> No
+                         </div>
+                    </div>
+                    <div class="control">
+                        <label for="enemy">Enemigos: </label>
+                         <div class="controlMutiple">
+                             <input type="radio" name="enemy" id="enemy" value="S"> Si 
+                             <input type="radio" name="enemy" id="enemy" value="N"> No
+                         </div>
+                    </div>
+                    <div class="control">
+                        <label for="terrestre">Terrestre: </label>
+                         <div class="controlMutiple">
+                             <input type="radio" name="terrestre" id="terrestre" value="S"> Si 
+                             <input type="radio" name="terrestre" id="terrestre" value="N"> No
+                         </div>
+                    </div>
+                    <div class="control">
+                        <label for="weakness">Debilidades: </label>
+                         <div class="controlMutiple">
+                             <input type="radio" name="weakness" id="weakness" value="S"> Si 
+                             <input type="radio" name="weakness" id="weakness" value="N"> No
+                         </div>
+                    </div>
+                    <div class="control">
+                        <label for="allweakness">Debilidades (Separar cada debilidad con una coma):</label>
+                        <textarea name="allweakness" id="allweakness" cols="30" rows="5"></textarea>
+                    </div>
+                    <div class="control">
+                        <label for="tools">Herramientas: </label>
+                         <div class="controlMutiple">
+                             <input type="radio" name="tools" id="tools" value="S"> Si 
+                             <input type="radio" name="tools" id="tools" value="N"> No
+                         </div>
+                    </div>
+                    <div class="control">
+                        <input type="submit" value="Guardar">
+                    </div>
+                </form>
             </section>
             <section class="invisible area" id="buscar">
                 <form id="busquedaHeroe">
@@ -33,7 +121,9 @@
                         <label for="">Valor</label>
                         <input name="dato" id="dato" type="text" disabled="true" placeholder="buscar heroe por...">
                     </div>
-                    <input type="submit" value="Buscar">
+                    <div class="control">
+                        <input type="submit" value="Buscar">
+                    </div>
                 </form>
                 <section id="imprime"></section>
             </section>

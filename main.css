@@ -32,4 +32,52 @@ nav #menus {
     display: flex;
     flex-direction: column;
     gap: 6px;
+    align-items: center;
+}
+
+.control input, textarea {
+    border: solid black 1px;
+}
+
+.controlMutiple {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+}
+
+#registraHeroe {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cardHeroe {
+    width: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    border: solid green 1px;
+    align-items: center;
+    padding: 8px;
+}
+
+.cardHeroe > div:nth-child(1) {
+    width: 75px;
+    height: 75px;
+}
+
+.cardHeroe > div:nth-child(1) > img {
+    width: 100%;
+    height: 100%;
+}
+
+.cardHeroe > div:nth-child(2) {
+    font-size: 14px;
+    font-weight: 700;
+}
+
+#imprime {
+    display: flex;
+    gap: 12px;
+    justify-content: space-around;
 }
